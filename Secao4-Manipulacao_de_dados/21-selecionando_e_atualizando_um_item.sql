@@ -1,0 +1,17 @@
+
+-- Seleciona Tudo
+SELECT * FROM TB_CLIENTE
+
+-- Seleciona Coluna Nome
+SELECT Nome FROM TB_CLIENTE
+
+-- Seleciona o José
+SELECT Id, Nome, CPF FROM TB_CLIENTE
+WHERE Id = 1
+
+-- Atualizar Campo
+UPDATE TB_CLIENTE
+SET CPF = '22233344466' WHERE Id = 1
+
+UPDATE TB_CLIENTE
+SET CPF = '22233344477', DataNascimento = '1985-06-24 17:50:22.0000000' WHERE Id = 1

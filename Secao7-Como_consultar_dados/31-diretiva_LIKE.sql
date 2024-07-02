@@ -1,0 +1,13 @@
+
+-- Banco = EMPRESA_DB
+
+SELECT * FROM TB_CLIENTE
+WHERE Cargo LIKE 'Representante%'
+
+
+SELECT * FROM TB_CLIENTE
+WHERE Cargo LIKE '%Pedidos'
+
+
+SELECT * FROM TB_CLIENTE
+WHERE Cargo LIKE '% de %'
