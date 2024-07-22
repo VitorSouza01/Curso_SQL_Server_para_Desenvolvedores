@@ -1,0 +1,12 @@
+
+-- QUAIS CARGOS POSSUEM MÉDIA SALARIAL MAIOR QUE A MÉDIA SALARIAL 
+-- DO CARGO DE Coordenador de Vendas Internas
+
+SELECT * FROM TB_FUNCIONARIO
+
+SELECT F1.Cargo, 
+		AVG(F1.Salario) 
+	FROM TB_FUNCIONARIO AS F1
+GROUP BY F1.Cargo
+HAVING AVG(F1.Salario) > (SELECT AVG(F2.Salario) FROM TB_FUNCIONARIO F2
+							WHERE F2.Cargo = 'Coordenador de Vendas Internas')

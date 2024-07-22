@@ -1,0 +1,13 @@
+
+SELECT NumeroPedido, 
+		SUM(Preco) AS TOTAL_VENDAS,
+		CASE
+			WHEN SUM(Preco) >= 50
+				THEN 'META ATINGIDA'
+			WHEN SUM(Preco) >= 20 AND SUM(Preco) < 50
+				THEN 'ACEITÁVEL'
+			ELSE
+			'NÃO ATINGIDA'
+		END
+	FROM TB_DETALHE_PEDIDO
+GROUP BY NumeroPedido
