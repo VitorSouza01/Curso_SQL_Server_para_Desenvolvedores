@@ -1,0 +1,20 @@
+
+-- ALTERANDO E EXCLUÍDO FUNÇÕES
+
+CREATE FUNCTION [dbo].[ListarPedidosCliente](@CLIENTE_ID AS VARCHAR(15))
+RETURNS TABLE
+AS
+RETURN SELECT * FROM TB_PEDIDO WHERE ClienteId = @CLIENTE_ID;
+
+
+-- Alterando Função
+
+ALTER FUNCTION [dbo].[ListarPedidosCliente](@NUMERO_PEDIDO AS INT)
+RETURNS TABLE
+AS
+RETURN SELECT * FROM TB_PEDIDO WHERE NumeroPedido = @NUMERO_PEDIDO;
+
+
+-- Excluir Função
+
+DROP FUNCTION [dbo].[ListarPedidosCliente]
